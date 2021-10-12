@@ -1,0 +1,40 @@
+{
+  "name": "cmlives",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phpexpert12345/cmlive-api"
+  },
+  "scripts": {
+    "start": "if-env NODE_ENV=production ?? npm run cross:prod || npm run cross:dev",
+    "cross:dev": "cross-env NODE_ENV=development nodemon app",
+    "cross:prod": "cross-env NODE_ENV=production node app",
+    "dev": "export NODE_ENV=development&&nodemon app",
+    "prod": "export NODE_ENV=production&&node app",
+    "win:dev": "set NODE_ENV=development&&nodemon app",
+    "win:prod": "set NODE_ENV=production&&node app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.1.0",
+    "fcm-node": "^1.6.1",
+    "joi": "^17.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.3",
+    "mysql2": "^2.1.0",
+    "rootpath": "^0.1.2",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
